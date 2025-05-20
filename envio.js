@@ -160,7 +160,7 @@ async function iniciarEnvioPeriodico() {
     await main();
     console.log(`Duración ciclo: ${((Date.now() - tiempoInicio) / 1000).toFixed(2)}s`);
     console.log(`Esperando ${INTERVALO_MILISEGUNDOS / 1000} segundos...\n`);
-    await new Promise(resolve => setTimeout(resolve, INTERVALO_MILISEGUNDOS));
+   // await new Promise(resolve => setTimeout(resolve, INTERVALO_MILISEGUNDOS));
   }
 }
 
