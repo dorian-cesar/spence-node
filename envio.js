@@ -1,7 +1,7 @@
 const mysql = require('mysql2/promise');
 const axios = require('axios');
 
-const INTERVALO_MILISEGUNDOS = 25 * 100;
+const INTERVALO_MILISEGUNDOS = 20 * 100;
 
 let trackersGlobal = [];
 let hashGlobal = '';
@@ -131,7 +131,7 @@ async function main() {
         console.time('📡 Tiempo respuesta Wisetrack');
         const insertRes = await axios.post(
           'https://gw.wisetrack.cl/BHP/1.0.0/InsertarPosicion',
-          payload,
+          JSON.stringify(payload, null, 2),
           {
             headers: {
               'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ async function main() {
           }
         );
         console.timeEnd('📡 Tiempo respuesta Wisetrack');
-        console.log(payload);
+        console.log(JSON.stringify(payload, null, 2));
         console.log('Respuesta Wisetrack:', JSON.stringify(insertRes.data, null, 4));
       }
     }
