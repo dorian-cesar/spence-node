@@ -112,7 +112,7 @@ async function main() {
           velocidad: speed,
           estado_registro: 1,
           estado_ignicion: 1,
-          numero_evento: ignicion === 1 ? 45 : 46,
+          numero_evento: 45, // ignicion === 1 ? 45 : 46,
           odometro: 0,
           numero_satelites: numero_satelites,
           hdop: 1,
