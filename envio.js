@@ -1,7 +1,7 @@
 const mysql = require('mysql2/promise');
 const axios = require('axios');
 
-const INTERVALO_MILISEGUNDOS = 20 * 100;
+const INTERVALO_MILISEGUNDOS = 15 * 100;
 
 let trackersGlobal = [];
 let hashGlobal = '';
